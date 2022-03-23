@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        x:Class="Avalonia.Raspi.MainWindow"
+        Title="Avalonia.Raspi">
+	<StackPanel>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="auto"></RowDefinition>
+				<RowDefinition Height="auto"></RowDefinition>
+				<RowDefinition Height="auto"></RowDefinition>
+				<RowDefinition Height="auto"></RowDefinition>
+				<RowDefinition Height="auto"></RowDefinition>
+				<RowDefinition Height="auto"></RowDefinition>
+				<RowDefinition Height="auto"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="auto"></ColumnDefinition>
+				<ColumnDefinition Width="auto"></ColumnDefinition>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<Label Grid.Row="0" Content="OS:"></Label>
+			<Label Grid.Row="0" Grid.Column="1" Content="{Binding OSName}"></Label>
+			
+			<Label Grid.Row="1" Content="64 Bit:"></Label>
+			<Label Grid.Row="1" Grid.Column="1" Content="{Binding Is64Bit}"></Label>
+			
+			<Label Grid.Row="2" Content="Temp CPU:"></Label>
+			<Label Grid.Row="2" Grid.Column="1" Content="{Binding CpuTemp}"></Label>
+			
+			<Label Grid.Row="3" Content="Processor:"></Label>
+			<Label Grid.Row="3" Grid.Column="1" Content="{Binding Processor}"></Label>
+			
+			<Label Grid.Row="4" Content="Cores:"></Label>
+			<Label Grid.Row="4" Grid.Column="1" Content="{Binding ProcessorCore}"></Label>
+		
+			<Label Grid.Row="5" Content="Machine Name:"></Label>
+			<Label Grid.Row="5" Grid.Column="1" Content="{Binding MachineName}"></Label>
+		</Grid>
+	</StackPanel>
+</Window>
